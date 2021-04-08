@@ -153,29 +153,3 @@ for n in range (600):
 plt.plot(x,y,'r')
 
 
-#%% Data processing
-
-'''
-The aim of this experiment was to determine the pressure-flow relationship.
-This will be done by fitting a polynomial regression model to the obtained 
-dataset.
-'''
-
-X = flow_measured[:threshold]
-Y = pressure_measured[:threshold]
-
-from sktlearn.model_selection import train_test_split
-X_train, X_test, Y_train, Y_test = train_test_split(X,Y,test_size=0.2,random_state=0)
-
-from sktlearn.preprocessing import PolynomialFeatures
-poly = PolynomialFeatures(degree=2)
-x_poly= poly.fit_transform(X_train)
-poly.fit(X_train, Y_train)
-
-from sktlearn.linear_model import LinearRegression
-reg=LinearRegression()
-reg.fit(x_poly,Y_train)
-
-y_pred=reg
-
-
