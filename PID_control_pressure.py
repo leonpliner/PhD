@@ -49,9 +49,9 @@ volume_utilised=0
 
 time_passed=0
 
-Kp=0.7
+Kp=1.15
 
-Ki=0.14
+Ki=0.6
 
 Kd=0.07
 
@@ -65,7 +65,7 @@ Input_P=[]
 
 Q_in = 0
 
-P_input=0.35*Q_d
+P_input=2.16+ 3.47*Q_d+ 0.03*Q_d*Q_d
 
 P_in=P_input
     
@@ -99,7 +99,7 @@ while time_passed<= t_step:
     
     Q_in = Kp*E + Ki*t_sampling*np.sum(Error_Q) + Kd*(flow_measured[len(flow_measured)-1] - flow_measured[len(flow_measured)-2])/t_sampling
     
-    P_input=0.35*Q_in
+    P_input=2.16+ 3.47*Q_in+ 0.03*Q_in*Q_in
     
     P_in = max(P_input,0)
     
