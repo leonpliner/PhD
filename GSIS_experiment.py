@@ -31,7 +31,7 @@ from Fluigent.SDK import fgt_set_pressure, fgt_get_pressure, fgt_get_sensorValue
 
 #%% The experiment
 
-P_in=
+P_in= 38
 
 Step_duration = [60*60, 30*60, 60*60, 30*60, 15*60]
 Message = ['\nChange the tube for KRB Low Glucose and press Enter to continue...\n',
@@ -58,8 +58,8 @@ for i in range(len(Step_duration)):
         
     #The sample is collected during the Steps 2)-4)
         
-    elif:
-    
+    else:
+        
         time_end= time.time()+Step_duration[i]
         
         time.sleep(120)
@@ -78,3 +78,10 @@ for i in range(len(Step_duration)):
 
     #change the tube with the solution
     input(Message[i])
+
+#At the end of the experiment, set the presure to zero and finish the session
+
+fgt_set_pressure(0, 0)
+fgt_close()
+
+
