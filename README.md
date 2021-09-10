@@ -1,4 +1,4 @@
-My project is titled "**Developing a 3D dynamic microfluidic device of pancreatic beta cells and adipocytes to modelize multi-organ crosstalks during type 2 diabetes development**".
+My project is titled "**Developing a 3D dynamic microfluidic device of pancreatic beta cells and adipocytes to modelize multi-organ crosstalks during type 2 diabetes development**", or in short, "**Micro-3D-Beta**"
 
 The research is cofunded by I-SITE ULNE and Marie Sklodowska-Curie action within the framework of the European Commission’s H2020 programme. I am affiliated with Institute of Electronics, Microelectronics, and Eanotechnology (IEMN), European Genomic Institute for Diabetes (EGID), University of Lille (Doctoral school of Biology and Health), INSERM and CNRS.
 
